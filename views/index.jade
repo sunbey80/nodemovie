@@ -1,0 +1,9 @@
+extend ./layout
+
+block content
+	.container
+		.articleList
+			ul
+				each item in articles
+					li 
+						a(href='/') #{item}
