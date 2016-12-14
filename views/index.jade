@@ -6,4 +6,4 @@ block content
 			ul
 				each item in articles
 					li 
-						a(href='/') #{item}
+						a(href='/article/#{item.article_id}') #{item.title}
