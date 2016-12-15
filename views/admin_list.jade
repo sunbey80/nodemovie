@@ -1,0 +1,11 @@
+extend ./layout
+
+block content
+	.container
+		.articleList.adminList
+			ul
+				each item in articles
+					li 
+						a(href='/article/#{item.article_id}') #{item.title}
+						button.btnDelete(onclick = 'window.location.href = "/delete/#{item.article_id}"') Delete
+						button.btnEdit(onclick = 'window.location.href = "/edit/#{item.article_id}"') Edit
